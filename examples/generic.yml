@@ -5,3 +5,84 @@ detectors:
   regex:
     # borrowing the gitleaks generic-api-key regex
     email: "(([a-z0-9][_|\\.])*[a-z0-9]+@([a-z0-9][-|_|\\.])*[a-z0-9]+\\.([a-z]{2,}))"
+
+- name: feishu
+  keywords:
+  - 'feishu.appid'
+  - 'feishu.appsecret'
+  - 'FEISHU_APPID'
+  - 'FEISHU_APPSECRET'
+  regex:
+    feishu: "feishu\\.appid|feishu\\.appsecret|FEISHU_APPID|FEISHU_APPSECRET"
+
+- name: dingtalk
+  keywords:
+  - 'dingtalk.appkey'
+  regex:
+    dingtalk: "dingtalk\\.appkey"
+
+- name: QINIU
+  keywords:
+  - 'QINIU_AK'
+  - 'QINIU_SK'
+  regex:
+    QINIU: "QINIU_AK|QINIU_SK"
+
+- name: tencent_AK
+  keywords:
+  - 'AKID'
+  regex:
+    tencent_AK: "(AKID[A-Za-z0-9]{13,32}\\W)"
+
+- name: phone_number
+  keywords:
+  - '1'
+  regex:
+    phone_number: "[^\\w]((?:(?:\\+|00)86)?1(?:(?:3[\\d])|(?:4[5-79])|(?:5[0-35-9])|(?:6[5-7])|(?:7[0-8])|(?:8[\\d])|(?:9[189]))\\d{8})[^\\w]"
+
+- name: IDCard
+  keywords:
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  regex:
+    IDCard: "[^0-9]((\\d{8}(0\\d|10|11|12)([0-2]\\d|30|31)\\d{3}$)|(\\d{6}(18|19|20)\\d{2}(0[1-9]|10|11|12)([0-2]\\d|30|31)\\d{3}(\\d|X|x)))[^0-9]"
+
+- name: Authorization_Header
+  keywords:
+  - 'basic'
+  - 'bearer'
+  regex:
+    Authorization_Header: "(basic [a-z0-9=:_\\+\\/-]{5,100})|(bearer [a-z0-9_.=:_\\+\\/-]{5,100})"
+
+- name: JWT
+  keywords:
+  - 'eyJ'
+  regex:
+    JWT: "\\WeyJ[A-Za-z0-9_-]{10,}\\.[A-Za-z0-9._-]{10,}|\\WeyJ[A-Za-z0-9_\\/+-]{10,}\\.[A-Za-z0-9._\\/+-]{10,}"
+
+- name: qywx_corpid
+  keywords:
+  - 'corpid'
+  regex:
+    corpid: "corpid\\W|Corpid\\W"
+
+- name: qywx_corpsecret
+  keywords:
+  - 'corpsecret'
+  regex:
+    corpsecret: "corpsecret\\W|Corpsecret\\W"
+
+- name: wx_appId
+  keywords:
+  - 'appid'
+  - 'appId'
+  regex:
+    appId: "([a|A]pp[i|I]d)\\W"
