@@ -7,6 +7,12 @@ detectors:
     # 对于 aaa@aaa.com.cn 这种不支持检测
     email: "(([a-z0-9][_|\\.])*[a-z0-9]+@([a-z0-9][-|_|\\.])*[a-z0-9]+\\.([a-z]{2,}))"
 
+- name: phone_number
+  keywords:
+  - '1'
+  regex:
+    phone_number: "[^\\w]((?:(?:\\+|00)86)?1(?:(?:3[\\d])|(?:4[5-79])|(?:5[0-35-9])|(?:6[5-7])|(?:7[0-8])|(?:8[\\d])|(?:9[189]))\\d{8})[^\\w]"
+
 - name: feishu
   keywords:
   - 'feishu.appid'
@@ -35,12 +41,6 @@ detectors:
   regex:
     tencent_AK: "(AKID[A-Za-z0-9]{13,32}\\W)"
 
-- name: phone_number
-  keywords:
-  - '1'
-  regex:
-    phone_number: "[^\\w]((?:(?:\\+|00)86)?1(?:(?:3[\\d])|(?:4[5-79])|(?:5[0-35-9])|(?:6[5-7])|(?:7[0-8])|(?:8[\\d])|(?:9[189]))\\d{8})[^\\w]"
-
 - name: IDCard
   keywords:
   - '1'
@@ -55,13 +55,6 @@ detectors:
   - '0'
   regex:
     IDCard: "[^0-9]((\\d{8}(0\\d|10|11|12)([0-2]\\d|30|31)\\d{3}$)|(\\d{6}(18|19|20)\\d{2}(0[1-9]|10|11|12)([0-2]\\d|30|31)\\d{3}(\\d|X|x)))[^0-9]"
-
-- name: Authorization_Header
-  keywords:
-  - 'basic'
-  - 'bearer'
-  regex:
-    Authorization_Header: "(basic [a-z0-9=:_\\+\\/-]{5,100})|(bearer [a-z0-9_.=:_\\+\\/-]{5,100})"
 
 - name: JWT
   keywords:
@@ -87,3 +80,10 @@ detectors:
   - 'appId'
   regex:
     appId: "([a|A]pp[i|I]d)\\W"
+
+- name: Authorization_Header
+  keywords:
+  - 'basic'
+  - 'bearer'
+  regex:
+    Authorization_Header: "(basic [a-z0-9=:_\\+\\/-]{5,100})|(bearer [a-z0-9_.=:_\\+\\/-]{5,100})"
