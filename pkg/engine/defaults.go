@@ -470,7 +470,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/timezoneapi"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/todoist"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/tokeet"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/tomorrowio"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/tomtom"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/tradier"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/travisci"
@@ -885,7 +884,7 @@ func DefaultDetectors() []detectors.Detector {
 		apiflash.Scanner{},
 		geocodio.Scanner{},
 		datagov.Scanner{},
-		tomorrowio.Scanner{},
+		//tomorrowio.Scanner{},
 		lexigram.Scanner{},
 		securitytrails.Scanner{},
 		foursquare.Scanner{},
