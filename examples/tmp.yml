@@ -1,0 +1,14 @@
+
+- name: wx_appId
+  keywords:
+  - 'appid'
+  - 'appId'
+  regex:
+    appId: "([a|A]pp[i|I]d)\\W"
+
+- name: Authorization_Header
+  keywords:
+  - 'basic'
+  - 'bearer'
+  regex:
+    Authorization_Header: "(basic [a-z0-9=:_\\+\\/-]{5,100})|(bearer [a-z0-9_.=:_\\+\\/-]{5,100})"
