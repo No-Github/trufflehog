@@ -4,6 +4,4 @@ dist
 *.test
 
 # binary
-trufflehog
-trufflehog-arm64
-trufflehog-amd64
+trufflehog*
