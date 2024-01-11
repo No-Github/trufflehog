@@ -187,8 +187,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/front"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ftp"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/fulcrum"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/fullstory"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/fullstory_v2"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/fusebill"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/gcp"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/geckoboard"
@@ -240,7 +238,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/integromat"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/intrinio"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/invoiceocean"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ipify"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ipinfodb"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ipquality"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/jdbc"
@@ -257,7 +254,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/kraken"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/kucoin"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/kylas"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/languagelayer"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/lastfm"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ldap"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/leadfeeder"
@@ -270,7 +266,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/loginradius"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/loyverse"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/luno"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/macaddress"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/madkudu"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/mandrill"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/mapquest"
@@ -330,7 +325,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/openuv"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/openvpn"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/openweather"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/optimizely"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/owlbot"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/pagerdutyapikey"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/pandadoc"
@@ -345,7 +339,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/peopledatalabs"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/pepipost"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/pipedream"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/pixabay"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/planviewleankit"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/planyo"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/plivo"
@@ -480,7 +473,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/typeform"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ubidots"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/uclassify"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/unifyid"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/unplugg"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/unsplash"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/upcdatabase"
@@ -836,8 +828,8 @@ func DefaultDetectors() []detectors.Detector {
 		// mixpanel.Scanner{},
 		//ipgeolocation.Scanner{},
 		//tmetric.Scanner{},
-		fullstory.Scanner{},
-		fullstory_v2.Scanner{},
+		//fullstory.Scanner{},
+		//fullstory_v2.Scanner{},
 		noticeable.Scanner{},
 		currencyscoop.Scanner{},
 		scrapingbee.Scanner{},
@@ -905,11 +897,11 @@ func DefaultDetectors() []detectors.Detector {
 		allsports.Scanner{},
 		amadeus.Scanner{},
 		ringcentral.Scanner{},
-		pixabay.Scanner{},
-		ipify.Scanner{},
+		//pixabay.Scanner{},
+		//ipify.Scanner{},
 		youneedabudget.Scanner{},
-		macaddress.Scanner{},
-		languagelayer.Scanner{},
+		//macaddress.Scanner{},
+		//languagelayer.Scanner{},
 		gengo.Scanner{},
 		aylien.Scanner{},
 		shutterstock.Scanner{},
@@ -971,7 +963,7 @@ func DefaultDetectors() []detectors.Detector {
 		upcdatabase.Scanner{},
 		commodities.Scanner{},
 		glassnode.Scanner{},
-		optimizely.Scanner{},
+		//optimizely.Scanner{},
 		censys.Scanner{},
 		scraperbox.Scanner{},
 		ticketmaster.Scanner{},
@@ -1042,7 +1034,7 @@ func DefaultDetectors() []detectors.Detector {
 		planyo.Scanner{},
 		zipapi.Scanner{},
 		//mailsac.Scanner{},
-		unifyid.Scanner{},
+		//unifyid.Scanner{},
 		worldweather.Scanner{},
 		strava.Scanner{},
 		autodesk.Scanner{},
