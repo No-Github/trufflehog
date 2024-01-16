@@ -55,7 +55,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/bitmex"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/blazemeter"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/blitapp"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/blogger"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/bombbomb"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/gitlab"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/gitlabv2"
@@ -176,7 +175,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/flickr"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/flightapi"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/flightstats"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/float"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/flowflu"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/flutterwave"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/formbucket"
@@ -224,7 +222,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/hiveage"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/holidayapi"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/holistic"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/host"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/huggingface"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/humanity"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/hunter"
@@ -235,7 +232,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/imagga"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/impala"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/insightly"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/integromat"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/intrinio"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/invoiceocean"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ipinfodb"
@@ -301,7 +297,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/ngrok"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/nicereply"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/nimble"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/nitro"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/noticeable"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/notion"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/nozbeteams"
@@ -333,7 +328,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/parsers"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/partnerstack"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/pastebin"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/paypaloauth"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/pdflayer"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/pdfshift"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/peopledatalabs"
@@ -344,7 +338,6 @@ import (
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/plivo"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/pollsapi"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/poloniex"
-	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/polygon"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/portainer"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/portainertoken"
 	"github.com/trufflesecurity/trufflehog/v3/pkg/detectors/positionstack"
@@ -599,7 +592,7 @@ func DefaultDetectors() []detectors.Detector {
 		&nexmoapikey.Scanner{},
 		&newrelicpersonalapikey.Scanner{},
 		&pushbulletapikey.Scanner{},
-		&paypaloauth.Scanner{},
+		//&paypaloauth.Scanner{},
 		//&datadogtoken.Scanner{},
 		//&airbrakeuserkey.Scanner{},
 		&sumologickey.Scanner{},
@@ -695,13 +688,13 @@ func DefaultDetectors() []detectors.Detector {
 		//&nytimes.Scanner{},
 		//&powrbot.Scanner{},
 		//&magnetic.Scanner{},
-		&polygon.Scanner{},
+		//&polygon.Scanner{},
 		//&smartsheets.Scanner{},
 		// &wepay.Scanner{},
 		// &artifactory.Scanner{},
-		&integromat.Scanner{},
+		//&integromat.Scanner{},
 		//&linenotify.Scanner{},
-		&float.Scanner{},
+		//&float.Scanner{},
 		//&monday.Scanner{},
 		// &debounce.Scanner{},
 		//&guardianapi.Scanner{},
@@ -854,9 +847,9 @@ func DefaultDetectors() []detectors.Detector {
 		clickuppersonaltoken.Scanner{},
 		tiingo.Scanner{},
 		billomat.Scanner{},
-		blogger.Scanner{},
+		//blogger.Scanner{},
 		front.Scanner{},
-		nitro.Scanner{},
+		//nitro.Scanner{},
 		apify.Scanner{},
 		dynalist.Scanner{},
 		//mavenlink.Scanner{},
@@ -946,7 +939,7 @@ func DefaultDetectors() []detectors.Detector {
 		neutrinoapi.Scanner{},
 		bitmex.Scanner{},
 		//deepai.Scanner{},
-		host.Scanner{},
+		//host.Scanner{},
 		pdfshift.Scanner{},
 		fetchrss.Scanner{},
 		proxycrawl.Scanner{},
